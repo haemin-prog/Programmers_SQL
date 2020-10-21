@@ -46,3 +46,15 @@ FROM ANIMAL_INS INS, ANIMAL_OUTS OUTS -- 두개의 TABLE 사용
 WHERE INS.ANIMAL_ID = OUTS.ANIMAL_ID -- 조건, 입양간 동물
 ORDER BY OUTS.DATETIME - INS.DATETIME DESC -- 보호소에 있었던 날짜
 LIMIT 2 -- 두마리 출력
+
+# ANIMAL_INS 테이블에 등록된 모든 레코드에 대해, 
+# 각 동물의 아이디와 이름, 들어온 날짜1를 조회하는 SQL문을 작성해주세요. 
+# 이때 결과는 아이디 순으로 조회해야 합니다.
+
+# DATE_FORMAT(DATETIME, 형식), 
+# 형식은 %Y (4자리 연도), %y (2자리 연도), %M (영어-월), %m (월), %D (일-th), %d (일), 
+# %H (24시간), %h (12시간), %i, %s 등
+
+SELECT ANIMAL_ID, NAME, DATE_FORMAT(DATETIME, "%Y-%m-%d") AS 날짜
+FROM ANIMAL_INS
+ORDER BY ANIMAL_ID
