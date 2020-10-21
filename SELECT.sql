@@ -1,5 +1,16 @@
 # MYSql / SELECT
 
+/* 기본 문법
+
+SELECT COLUMN, * : ALL 
+FROM TABLE
+
+WHERE : 조건
+ORDER BY : 정렬, ASC : 오름차순 정렬, DESC : 내림차순 정렬
+LIMIT : 제한, OFFSET : 시작, OFFSET 부터 n개
+
+*/ 
+
 # 동물 보호소에 들어온 모든 동물의 정보를 ANIMAL_ID순으로 조회하는 SQL문을 작성해주세요. SQL을 실행하면 다음과 같이 출력되어야 합니다.
 
 SELECT *
